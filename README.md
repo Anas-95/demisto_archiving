@@ -1,7 +1,7 @@
 # Demisto Archive Attathments And Artifacts
 
-### Archive attachments and artifacts on a multi-tenancy deployment
-To archive artifacts and attachments on a multi-tenancy deployment for a specific period, just run the script with your chosen arguments.
+### Archive attachments and artifacts on a multi-tenant deployment
+To archive artifacts and attachments in a multi-tenant deployment for a specific period, just run the script with your chosen arguments.
 
 The script will work as following:
 1. stop the service
