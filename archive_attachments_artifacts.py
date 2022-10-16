@@ -85,13 +85,11 @@ def validate_time(time_from, time_to, now):
     if time_from.date() >= now.date():
         raise ArgException(f"'--from' argument should present a date in the past: --to {time_from}")
     elif time_to.date() >= now.date():
-        pass
-        # raise ArgException(f"'--to' argument should present a date in the past: --to {time_to}")
+        raise ArgException(f"'--to' argument should present a date in the past: --to {time_to}")
     elif time_to <= time_from:
         raise ArgException("'--from' argument should present a date older than '--to' argument.")
     elif (now - time_to).days < 90 or (now - time_from).days < 90:
-        pass
-        # raise ArgException("'--from' and '--to' arguments should present dates older than 90 days from now.")
+        raise ArgException("'--from' and '--to' arguments should present dates older than 90 days from now.")
 
 
 def get_time(time):
